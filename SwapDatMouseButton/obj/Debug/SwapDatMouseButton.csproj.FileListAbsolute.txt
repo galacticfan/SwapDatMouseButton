@@ -1,1 +1,9 @@
 c:\users\jake\documents\visual studio 2013\Projects\SwapDatMouseButton\SwapDatMouseButton\bin\Debug\SwapDatMouseButton.exe.config
+c:\users\jake\documents\visual studio 2013\Projects\SwapDatMouseButton\SwapDatMouseButton\bin\Debug\SwapDatMouseButton.exe
+c:\users\jake\documents\visual studio 2013\Projects\SwapDatMouseButton\SwapDatMouseButton\bin\Debug\SwapDatMouseButton.pdb
+c:\users\jake\documents\visual studio 2013\Projects\SwapDatMouseButton\SwapDatMouseButton\obj\Debug\SwapDatMouseButton.csprojResolveAssemblyReference.cache
+c:\users\jake\documents\visual studio 2013\Projects\SwapDatMouseButton\SwapDatMouseButton\obj\Debug\SwapDatMouseButton.MainForm.resources
+c:\users\jake\documents\visual studio 2013\Projects\SwapDatMouseButton\SwapDatMouseButton\obj\Debug\SwapDatMouseButton.Properties.Resources.resources
+c:\users\jake\documents\visual studio 2013\Projects\SwapDatMouseButton\SwapDatMouseButton\obj\Debug\SwapDatMouseButton.csproj.GenerateResource.Cache
+c:\users\jake\documents\visual studio 2013\Projects\SwapDatMouseButton\SwapDatMouseButton\obj\Debug\SwapDatMouseButton.exe
+c:\users\jake\documents\visual studio 2013\Projects\SwapDatMouseButton\SwapDatMouseButton\obj\Debug\SwapDatMouseButton.pdb
