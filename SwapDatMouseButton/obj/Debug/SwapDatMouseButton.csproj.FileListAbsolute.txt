@@ -1,0 +1,1 @@
+c:\users\jake\documents\visual studio 2013\Projects\SwapDatMouseButton\SwapDatMouseButton\bin\Debug\SwapDatMouseButton.exe.config
