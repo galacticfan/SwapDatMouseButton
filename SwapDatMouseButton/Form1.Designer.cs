@@ -71,6 +71,7 @@
             this.startUpCreate.TabIndex = 0;
             this.startUpCreate.Text = "Create Startup File";
             this.startUpCreate.UseVisualStyleBackColor = true;
+            this.startUpCreate.Click += new System.EventHandler(this.startUpCreate_Click);
             // 
             // startUpDelete
             // 
@@ -89,6 +90,7 @@
             this.swapMouseBtn.TabIndex = 2;
             this.swapMouseBtn.Text = "Swap Mouse Buttons";
             this.swapMouseBtn.UseVisualStyleBackColor = true;
+            this.swapMouseBtn.Click += new System.EventHandler(this.swapMouseBtn_Click);
             // 
             // msgLog
             // 
