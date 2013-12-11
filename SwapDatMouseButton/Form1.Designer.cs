@@ -81,6 +81,7 @@
             this.startUpDelete.TabIndex = 1;
             this.startUpDelete.Text = "Delete Startup File";
             this.startUpDelete.UseVisualStyleBackColor = true;
+            this.startUpDelete.Click += new System.EventHandler(this.startUpDelete_Click);
             // 
             // swapMouseBtn
             // 

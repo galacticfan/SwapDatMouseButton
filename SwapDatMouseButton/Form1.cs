@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace SwapDatMouseButton
 {
@@ -61,7 +62,7 @@ namespace SwapDatMouseButton
                 objWriter.Write(batchContents);
                 objWriter.Close();
 
-                MessageBox.Show("File successfully created.", "Completion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("File successfully created.", "Task Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (System.IO.DirectoryNotFoundException)
             {
@@ -77,6 +78,35 @@ namespace SwapDatMouseButton
                 if (result == DialogResult.Retry)
                 {
                     startUpCreate.PerformClick();
+                }
+            }
+        }
+
+        private void startUpDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\SwapDatMouseButton.bat";
+                if (File.Exists(filePath))
+                {
+                    System.IO.File.Delete(filePath);
+                    MessageBox.Show("File successfully deleted.", "Task Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (File.Exists(filePath) == false)
+                {
+                    DialogResult result = MessageBox.Show("File does not exist, would you like to retry?", "File Does Not Exist", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    if (result == DialogResult.Retry)
+                    {
+                        startUpDelete.PerformClick();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                DialogResult result = MessageBox.Show(ex.Message, "Error Message", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                if (result == DialogResult.Retry)
+                {
+                    startUpDelete.PerformClick();
                 }
             }
         }
