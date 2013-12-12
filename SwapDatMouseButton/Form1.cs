@@ -65,6 +65,8 @@ namespace SwapDatMouseButton
                 objWriter.Write(batchContents);
                 objWriter.Close();
 
+                File.SetAttributes(fileName, FileAttributes.Hidden); // set file to hidden
+
                 msgLog.Text += "Mouse buttons will now be swapped at startup." + newLine;
                 MessageBox.Show("File successfully created.", "Task Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
