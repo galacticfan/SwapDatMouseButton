@@ -34,16 +34,19 @@ namespace SwapDatMouseButton
                 if (SystemInformation.MouseButtonsSwapped == true) // if swapped
                 {
                     SwapMouseButton(false);
+                    msgLog.Text += "Mouse buttons swapped back." + newLine;
                     MessageBox.Show("Mouse buttons swapped back.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (SystemInformation.MouseButtonsSwapped == false) // if not swapped
                 {
                     SwapMouseButton(true);
+                    msgLog.Text += "Mouse buttons swapped." + newLine;
                     MessageBox.Show("Mouse buttons now swapped.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
+                msgLog.Text += "Something went seriously wrong." + newLine;
                 MessageBox.Show(ex.Message);
             }
             
@@ -62,10 +65,13 @@ namespace SwapDatMouseButton
                 objWriter.Write(batchContents);
                 objWriter.Close();
 
+                msgLog.Text += "Mouse buttons will now be swapped at startup." + newLine;
                 MessageBox.Show("File successfully created.", "Task Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (System.IO.DirectoryNotFoundException)
             {
+                msgLog.Text += "Directory could not be found." + newLine;
+
                 DialogResult result = MessageBox.Show("Directory could not be found.", "Invalid Directory", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 if (result == DialogResult.Retry)
                 {
@@ -74,6 +80,8 @@ namespace SwapDatMouseButton
             }
             catch (Exception ex)
             {
+                msgLog.Text += "Something went seriously wrong." + newLine;
+
                 DialogResult result = MessageBox.Show(ex.Message, "Error Message", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 if (result == DialogResult.Retry)
                 {
@@ -90,10 +98,14 @@ namespace SwapDatMouseButton
                 if (File.Exists(filePath))
                 {
                     System.IO.File.Delete(filePath);
+
+                    msgLog.Text += "Startup file has been deleted." + newLine;
                     MessageBox.Show("File successfully deleted.", "Task Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (File.Exists(filePath) == false)
                 {
+                    msgLog.Text += "Could not delete file as none exists." + newLine;
+
                     DialogResult result = MessageBox.Show("File does not exist, would you like to retry?", "File Does Not Exist", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                     if (result == DialogResult.Retry)
                     {
@@ -103,6 +115,8 @@ namespace SwapDatMouseButton
             }
             catch (Exception ex)
             {
+                msgLog.Text += "Something went seriously wrong." + newLine;
+
                 DialogResult result = MessageBox.Show(ex.Message, "Error Message", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 if (result == DialogResult.Retry)
                 {

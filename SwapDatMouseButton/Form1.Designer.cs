@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.startUpCreate = new System.Windows.Forms.Button();
-            this.startUpDelete = new System.Windows.Forms.Button();
             this.swapMouseBtn = new System.Windows.Forms.Button();
-            this.msgLog = new System.Windows.Forms.TextBox();
+            this.startUpDelete = new System.Windows.Forms.Button();
+            this.startUpCreate = new System.Windows.Forms.Button();
             this.msgLogLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.msgLog = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -63,15 +63,15 @@
             this.splitContainer1.SplitterDistance = 107;
             this.splitContainer1.TabIndex = 0;
             // 
-            // startUpCreate
+            // swapMouseBtn
             // 
-            this.startUpCreate.Location = new System.Drawing.Point(12, 69);
-            this.startUpCreate.Name = "startUpCreate";
-            this.startUpCreate.Size = new System.Drawing.Size(80, 37);
-            this.startUpCreate.TabIndex = 0;
-            this.startUpCreate.Text = "Create Startup File";
-            this.startUpCreate.UseVisualStyleBackColor = true;
-            this.startUpCreate.Click += new System.EventHandler(this.startUpCreate_Click);
+            this.swapMouseBtn.Location = new System.Drawing.Point(12, 12);
+            this.swapMouseBtn.Name = "swapMouseBtn";
+            this.swapMouseBtn.Size = new System.Drawing.Size(80, 37);
+            this.swapMouseBtn.TabIndex = 2;
+            this.swapMouseBtn.Text = "Swap Mouse Buttons";
+            this.swapMouseBtn.UseVisualStyleBackColor = true;
+            this.swapMouseBtn.Click += new System.EventHandler(this.swapMouseBtn_Click);
             // 
             // startUpDelete
             // 
@@ -83,26 +83,15 @@
             this.startUpDelete.UseVisualStyleBackColor = true;
             this.startUpDelete.Click += new System.EventHandler(this.startUpDelete_Click);
             // 
-            // swapMouseBtn
+            // startUpCreate
             // 
-            this.swapMouseBtn.Location = new System.Drawing.Point(12, 12);
-            this.swapMouseBtn.Name = "swapMouseBtn";
-            this.swapMouseBtn.Size = new System.Drawing.Size(80, 37);
-            this.swapMouseBtn.TabIndex = 2;
-            this.swapMouseBtn.Text = "Swap Mouse Buttons";
-            this.swapMouseBtn.UseVisualStyleBackColor = true;
-            this.swapMouseBtn.Click += new System.EventHandler(this.swapMouseBtn_Click);
-            // 
-            // msgLog
-            // 
-            this.msgLog.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.msgLog.Location = new System.Drawing.Point(13, 69);
-            this.msgLog.Multiline = true;
-            this.msgLog.Name = "msgLog";
-            this.msgLog.ReadOnly = true;
-            this.msgLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.msgLog.Size = new System.Drawing.Size(148, 80);
-            this.msgLog.TabIndex = 0;
+            this.startUpCreate.Location = new System.Drawing.Point(12, 69);
+            this.startUpCreate.Name = "startUpCreate";
+            this.startUpCreate.Size = new System.Drawing.Size(80, 37);
+            this.startUpCreate.TabIndex = 0;
+            this.startUpCreate.Text = "Create Startup File";
+            this.startUpCreate.UseVisualStyleBackColor = true;
+            this.startUpCreate.Click += new System.EventHandler(this.startUpCreate_Click);
             // 
             // msgLogLabel
             // 
@@ -124,6 +113,18 @@
             this.label1.Text = "If you want to temporarily swap \r\nthe mouse buttons, press the\r\n\"Swap Mouse Butto" +
     "ns\" button.\r\n\r\n";
             // 
+            // msgLog
+            // 
+            this.msgLog.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.msgLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgLog.Location = new System.Drawing.Point(13, 69);
+            this.msgLog.Multiline = true;
+            this.msgLog.Name = "msgLog";
+            this.msgLog.ReadOnly = true;
+            this.msgLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.msgLog.Size = new System.Drawing.Size(148, 80);
+            this.msgLog.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,6 +133,8 @@
             this.ClientSize = new System.Drawing.Size(284, 161);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.Text = "Swap Dat\' Mouse Button";
             this.splitContainer1.Panel1.ResumeLayout(false);
